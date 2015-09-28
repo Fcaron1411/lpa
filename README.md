@@ -3,7 +3,7 @@
 1. Aluno: Felipe Caron Figueiredo (9311664)
    Prof. Adenilso da Silva Simão
 
-2. Os programas foram desenvolvidos no windows 8 - 64 bits no programa Code Blocks. Esses programas foram compilados pelo compilador ddo Code Blocks. As bibliotecas utilizadas foram stdio.h e stdlib.h
+2. Os programas foram desenvolvidos no windows 8 - 64 bits no programa Code Blocks. Esses programas foram compilados pelo compilador do Code Blocks. As bibliotecas utilizadas foram stdio.h e stdlib.h
 
 3. Descrição dos programas:
 
