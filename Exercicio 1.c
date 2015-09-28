@@ -16,11 +16,17 @@ void insertionsort(int numeros[], int tam) {
 
 int main(){
 
+    printf("           \nPARES MAIS PROXIMOS\n\n");
+
     int n;
 
     printf("Digite o numero de inteiros a serem analisados: ");//descobre o tamanho do vetor a ser alocado
         fflush(stdin);
         scanf("%d", &n);
+        while(n<=1){ // while de segurança pois nao existe vetor com tamanho negativo nem 0
+        printf("Valor invalido. Por favor insira um numero positivo maior que 1.\n");
+		scanf("%d",&n);
+	}
 
     int *v;
     v = (int*) malloc (n*sizeof(int));//aloca um vetor do tamanho ja antes especificado
@@ -33,13 +39,14 @@ int main(){
 
     insertionsort(v,n); //chama a função para ordenar o vetor
 
+    system("cls");
 
     int menor, m, diferenca;
     menor = v[1]-v[0];//assume que a menor diferença sera entre os primeiros termos do vetor
     m = 0;
 
     for(i=1;i<n-1;i++){
-        diferenca = v[i+1] - v[i];
+        diferenca = v[i+1] - v[i]; //estudaas diferenças entre todos os elementos
         if(diferenca<menor){
                 menor = diferenca;
                 m = i;
@@ -47,6 +54,8 @@ int main(){
     }
 
     printf("\n\nA menor diferenca e: (%d) - (%d) = %d", v[m+1], v[m], menor);
+
+    free(v);//liberar a memoria
 
 return 0;
 

@@ -16,11 +16,17 @@ void insertionsort(int numeros[], int tam) {
 
 int main(){
 
+    printf("        \n     ELEMENTO UNICO\n\n");
+
     int n;
 
     printf("Digite o numero de inteiros a serem analisados: ");//descobre o tamanho do vetor a ser alocado
         fflush(stdin);
         scanf("%d", &n);
+        while(n<=1){ // while de seguranÃ§a pois nao existe vetor com tamanho negativo nem 0
+        printf("Valor invalido. Por favor insira um numero positivo maior que 1.\n");
+		scanf("%d",&n);
+	}
 
     int *v;
     v = (int*) malloc (n*sizeof(int));//aloca um vetor do tamanho ja antes especificado
@@ -31,7 +37,9 @@ int main(){
         scanf("%d", &v[i]);
         }
 
-    insertionsort(v,n); //chama a função para ordenar o vetor
+    insertionsort(v,n); //chama a funÐ·Ð³o para ordenar o vetor
+
+    system("cls");
 
     int *vet;
     vet = (int*) malloc (n*sizeof(int));//cria novo vetor para armezenar os numeros que so aparecem uma vez
@@ -40,17 +48,17 @@ int main(){
     for(i=0;i<n;i++){
     if(i!=0 && i!=n-1){//analisa os inteiros do meio do vetor, ou seja, exclui-se as pontas
         if(v[i]!=v[i-1] && v[i]!=v[i+1]){//verifica se os elementos ao lado do elemento analisado sao diferentes dele
-            vet[k]=v[i];//novo vetor recebe o valor que é unico no vetor inicial
+            vet[k]=v[i];//novo vetor recebe o valor que Ã© unico no vetor inicial
             k++;
         }
 
     } else { if (i==0){//analisa o primeiro elemento do vetor
-                if(v[i]!=v[i+1]){//verifica se o primeiro elemento é diferente do segundo
+                if(v[i]!=v[i+1]){//verifica se o primeiro elemento Ð¹ diferente do segundo
                 vet[k]=v[i];
                 k++;
             }
             } else {
-            if(v[i]!=v[i-1]){//analisa se o ultimo valor do vetor é diferente do anterior
+            if(v[i]!=v[i-1]){//analisa se o ultimo valor do vetor Ð¹ diferente do anterior
                 vet[k]=v[i];
                 }
 
@@ -58,10 +66,17 @@ int main(){
 
             }
     }
-    printf("os valores que so aparecem uma vez sao: ");
-    for(i=0;i<=k;i++){
-        printf("%d ",vet[i]);//printa o vetor composto apenas de valores que só aparecem uma vez no vetor inicial
+    if(k==0){
+            printf("Nao existe elemento unico");
+            } else {
+            printf("os valores que so aparecem uma vez sao: ");
+    for(i=0;i<k;i++){
+        printf("%d ",vet[i]);//printa o vetor composto apenas de valores que sÑƒ aparecem uma vez no vetor inicial
+                    }
     }
+
+    free(v);  //liberar a memoria
+    free(vet);
 
  return 0;
 }
