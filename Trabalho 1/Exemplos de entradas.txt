@@ -1,0 +1,25 @@
+Exemplo de entradas para os tres programas:
+
+1)
+Digite o numero de inteiros a serem analisados: 
+5
+Digite os "x" valores a serem analisados:
+4 4 4 4 4 
+
+2)
+Digite o numero de inteiros a serem analisados:
+7
+Digite os "x" valores a serem analisados:
+-9 -11 0 5 4 10 6
+
+3)
+Digite o numero de inteiros a serem analisados:
+10
+Digite os "x" valores a serem analisados:
+0 0 0 2 4 2 -22 1 1 -22 
+
+4)
+Digite o numero de inteiros a serem analisados:
+20
+Digite os "x" valores a serem analisados:
+22 11 11 11 22 432 121 121 0 -82 -89 22 6 4 8 -4 -4 0 34 33
