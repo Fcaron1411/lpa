@@ -1,9 +1,9 @@
   Os programas contidos nessa pagina são referentes à exercicios solicitados na disciplina SSC0300 - Linguagens de programação e aplicações, do curso de engenharia mecânica da instituição EESC-USP
 
 1. Aluno: Felipe Caron Figueiredo (9311664)
-   Prof. Adenilso da Silva Simão
+   Professor: Adenilso da Silva Simão
 
-2. Os programas foram desenvolvidos no windows 8 - 64 bits no programa Code Blocks. Esses programas foram compilados pelo compilador ddo Code Blocks. As bibliotecas utilizadas foram stdio.h e stdlib.h
+2. Os programas foram desenvolvidos no windows 8 - 64 bits no programa Code Blocks. Esses programas foram compilados pelo compilador do Code Blocks. As bibliotecas utilizadas foram stdio.h e stdlib.h
 
 3. Descrição dos programas:
 
